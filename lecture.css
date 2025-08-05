@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f0e9e0; /* light text */
+
+  /* Background gradient from dark blue (left) to lighter purple (right) */
+  background: linear-gradient(135deg, #1b1b4d 20%, #4b3a7a 60%, #7b5ea8 90%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Purple glow overlay with blend mode */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at left center, rgba(123, 94, 168, 0.4), transparent 70%);
+  mix-blend-mode: screen;
+  z-index: 0;
+}
